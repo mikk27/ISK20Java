@@ -1,0 +1,2 @@
+module ISK20Harjutused {
+}
