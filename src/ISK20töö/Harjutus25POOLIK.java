@@ -1,10 +1,10 @@
-package ISK20töö;
+package ISK20tÃ¶Ã¶;
 import java.io.*;
 import java.util.Scanner;
 public class Harjutus25 {
 
 	public static void main(String[] args) {
-				File minuFail = new File("D:\\java\\ISK20Harjutused\\bin\\ISK20töö/students.csv");
+				File minuFail = new File("D:\\java\\ISK20Harjutused\\bin\\ISK20tÃ¶Ã¶/students.csv");
 				try {
 					Scanner inputStream = new Scanner(minuFail);
 					inputStream.next();
