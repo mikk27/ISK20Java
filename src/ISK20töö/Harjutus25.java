@@ -1,42 +1,42 @@
-package ISK20töö;
+package ISK20tÃ¶Ã¶;
 
 import java.io.*;
-import java.util.ArrayList; //võimaldab manipuleerida ja lisada
-import java.util.Random; // võimaldab genereerida suvalisi numbreid
+import java.util.ArrayList; //vÃµimaldab manipuleerida ja lisada
+import java.util.Random; // vÃµimaldab genereerida suvalisi numbreid
 
 public class Harjutus25 {
 
-	//Prindib välja ID koguarvu, ehk mitu õpilast on nimekirjas
-    public static void showkõikõpilased(ArrayList<Main> dataList){  //tekitame "andmebaasi" nimega showkõikõpilased mis liiguvad meie tabelisse
+	//Prindib vÃ¤lja ID koguarvu, ehk mitu Ãµpilast on nimekirjas
+    public static void showkÃµikÃµpilased(ArrayList<Main> dataList){  //tekitame "andmebaasi" nimega showkÃµikÃµpilased mis liiguvad meie tabelisse
           System.out.println("1. Kokku kasutajaid:"+(dataList.size()-1));  //-1, kuna alustame lugemist nullist.
         }
     
-    public static void showkümmeõpilast(ArrayList<Main> dataList){  
-          System.out.println("\n2. Esimese kümne kasutaja info: ");
-        for (int i = 0; i <= 10; i++) {  //kui i on väiksem kui 10, siis lisame +1 kuni saame 10 täis
-            Main item = dataList.get(i); //võtame tabelist 10 elementi
-            //prindime välja id, eesnime, perenime, emaili ja soo.
-            System.out.println(item.id+"\t\t"+item.first+"\t\t"+item.last+"\t\t"+item.email+"\t\t"+item.gender); // (\t) tähendab, et jätame topelttühiku vahele aka. tab klahv.
+    public static void showkÃ¼mmeÃµpilast(ArrayList<Main> dataList){  
+          System.out.println("\n2. Esimese kÃ¼mne kasutaja info: ");
+        for (int i = 0; i <= 10; i++) {  //kui i on vÃ¤iksem kui 10, siis lisame +1 kuni saame 10 tÃ¤is
+            Main item = dataList.get(i); //vÃµtame tabelist 10 elementi
+            //prindime vÃ¤lja id, eesnime, perenime, emaili ja soo.
+            System.out.println(item.id+"\t\t"+item.first+"\t\t"+item.last+"\t\t"+item.email+"\t\t"+item.gender); // (\t) tÃ¤hendab, et jÃ¤tame topelttÃ¼hiku vahele aka. tab klahv.
             
             
         
         }
     }
     
-    public static void showsuvalisedõpilased(ArrayList<Main> dataList){
+    public static void showsuvalisedÃµpilased(ArrayList<Main> dataList){
         
-        System.out.println("\n2. Kolm suvalist õpilast: "); // (\n) tähendab, et kirjutame uuelt realt aka enter klahv.
+        System.out.println("\n2. Kolm suvalist Ãµpilast: "); // (\n) tÃ¤hendab, et kirjutame uuelt realt aka enter klahv.
         Main item = dataList.get(0);
         System.out.println(item.id+"\t\t"+item.first+"\t"+item.last+"\t\t"+item.email+"\t\t\t"+item.gender);
         
         
         Random r = new Random();
-        int high = dataList.size(); //määrame, et suvaliselt valitakse KÕIKIDE kasutajate hulgast
-        for (int i=1 ; i<4;i++){ //määrab, et loop töötab 3 korda, ehk väljastame 3 nime
+        int high = dataList.size(); //mÃ¤Ã¤rame, et suvaliselt valitakse KÃ•IKIDE kasutajate hulgast
+        for (int i=1 ; i<4;i++){ //mÃ¤Ã¤rab, et loop tÃ¶Ã¶tab 3 korda, ehk vÃ¤ljastame 3 nime
             int random = r.nextInt(high); // suvaliselt genereerime kasutajad mida prindime
             Main randomItem = dataList.get(random); 
             
-            //et oleks lihtsam aru saada, lisame päised ka kus näeme ID, nime, emaili ja sugu
+            //et oleks lihtsam aru saada, lisame pÃ¤ised ka kus nÃ¤eme ID, nime, emaili ja sugu
             System.out.println(randomItem.id+"\t\t"+randomItem.first+"\t\t"+randomItem.last+"\t\t"+randomItem.email+"\t\t"+randomItem.gender);
             
         }
@@ -45,7 +45,7 @@ public class Harjutus25 {
     
      public static void showemailid(ArrayList<Main> dataList){ 
           System.out.println("\n4. Kuvan ainult emailid: ");
-        for (int i = 0; i < dataList.size(); i++) { //loop jookseb kuni emailid lõppevad
+        for (int i = 0; i < dataList.size(); i++) { //loop jookseb kuni emailid lÃµppevad
             Main item = dataList.get(i);
             System.out.println(item.email);
             
@@ -53,19 +53,19 @@ public class Harjutus25 {
         }
     }
      
-     public static void showesitähed(ArrayList<Main> dataList){
-          System.out.println("\n5. Eesnime esimesed tähed: ");
-        for (int i = 1; i < dataList.size(); i++) { //alustame loopi esimesest nimest ja töötame tabeli lõpuni, kuni kõik nimed on läbi.
+     public static void showesitÃ¤hed(ArrayList<Main> dataList){
+          System.out.println("\n5. Eesnime esimesed tÃ¤hed: ");
+        for (int i = 1; i < dataList.size(); i++) { //alustame loopi esimesest nimest ja tÃ¶Ã¶tame tabeli lÃµpuni, kuni kÃµik nimed on lÃ¤bi.
             Main item = dataList.get(i);  //tirime sisse meie andmed
-            String name = item.first; //määrame, et kasutame eesnimesid
-            char first = name.charAt(0); // prinditavat nime kuvame esimese tähe järgi
+            String name = item.first; //mÃ¤Ã¤rame, et kasutame eesnimesid
+            char first = name.charAt(0); // prinditavat nime kuvame esimese tÃ¤he jÃ¤rgi
             System.out.println(first);
            
             
         
         }
     }
-     //genereerime suvalise parooli perekonnanime lõppu
+     //genereerime suvalise parooli perekonnanime lÃµppu
      public static void generatePassword(ArrayList<Main> dataList){ 
          Random r = new Random();
         //kahekohalised suvalised numbrid 10-99
@@ -73,9 +73,9 @@ public class Harjutus25 {
         int high = 99;
         
         System.out.println("\n6. Paroolid kasutajatele(perenimi+suvalinenr)");
-        for (int i = 0; i < dataList.size(); i++) { //võtame kogu tabeli algusest lõpuni
+        for (int i = 0; i < dataList.size(); i++) { //vÃµtame kogu tabeli algusest lÃµpuni
             Main item = dataList.get(i); 
-            String last = item.last; //võtame perenime
+            String last = item.last; //vÃµtame perenime
             int random = r.nextInt(high-low); //lisame suvalised nr 10-99
             System.out.println(last+random); //prindime perenime+suvalisenr
             
@@ -87,7 +87,7 @@ public class Harjutus25 {
     //tehnilisem pool
   public static void main(String[] args) throws IOException { 
     
-      String file = "C:/Users/Gamer1/Desktop/students.csv"; //asukoht, kus csv faili tuleb lugeda
+      String file = "FAILI ASUKOHT SIIA"; //asukoht, kus csv faili tuleb lugeda
       BufferedReader reader = null;
       String line = "";
       ArrayList<Main> dataList = new ArrayList<Main>();
@@ -99,7 +99,7 @@ public class Harjutus25 {
              
               String[] row = line.split(","); // ridade eraldaja on koma.
               Main data = new Main(row[0],row[1],row[2],row[3],row[4]); //meie andmed paiknevad 4 sektsioonil
-              dataList.add(data); //lisame nad ühte suurde tabelisse kokku
+              dataList.add(data); //lisame nad Ã¼hte suurde tabelisse kokku
               
           }
 
@@ -112,12 +112,12 @@ public class Harjutus25 {
       }
       
       
-      // prindin välja kõik informatsiooni kasutades eelmiseid funktsioone
-      showkõikõpilased(dataList);
-      showkümmeõpilast(dataList);
-      showsuvalisedõpilased(dataList);
+      // prindin vÃ¤lja kÃµik informatsiooni kasutades eelmiseid funktsioone
+      showkÃµikÃµpilased(dataList);
+      showkÃ¼mmeÃµpilast(dataList);
+      showsuvalisedÃµpilased(dataList);
       showemailid(dataList);
-      showesitähed(dataList);
+      showesitÃ¤hed(dataList);
       generatePassword(dataList);
   }
     
